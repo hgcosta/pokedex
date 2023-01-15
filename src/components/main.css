@@ -67,3 +67,16 @@ header .container{
     color: #2F3133;
     max-width: 350px;
 }
+.pesquisaContent{
+    background-color: #fff;
+}
+.contentPesquisa{
+    display: flex;
+}
+.contentPesquisa ul{
+    list-style: none;
+}
+.contentPesquisa .colPesquisa{
+    padding:4.5rem 0;
+    width: 40%;
+}
