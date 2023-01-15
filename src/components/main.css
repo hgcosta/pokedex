@@ -77,6 +77,23 @@ header .container{
     list-style: none;
 }
 .contentPesquisa .colPesquisa{
-    padding:4.5rem 0;
-    width: 40%;
+    margin: 0 0 4.5rem 0;
+    padding-top: 4.5rem;
+    width: 25%;
+    border-right: solid 1px #EFF3F6;
+}
+.colPesquisa .listaTipos li{
+    margin-bottom: 3.5rem;
+}
+.colPesquisa .listaTipos li a{
+    text-decoration: none;
+    color: #ACB9C1;
+    font-weight: 500;
+    transition: all ease-in-out .5s;
+}
+.colPesquisa .listaTipos li a img{
+    margin-right: 2rem;
+}
+.colPesquisa .listaTipos li a:hover{
+    color: #3E75C3;
 }
