@@ -9,6 +9,7 @@
     margin: 0 auto;
     max-width: 1250px;
     width: 100%;
+    padding: 0 1rem;
 }
 .hero{
     background: url('../img/bg-hero.svg');

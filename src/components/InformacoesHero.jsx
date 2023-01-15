@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Chamada from './Chamada.jsx';
 const InformacoesHero = () => {
   return (
     <div className='contetHeroInfo'>

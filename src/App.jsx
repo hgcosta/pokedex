@@ -1,20 +1,15 @@
-import Header from './components/Header';
-import InformacoesHero from './components/InformacoesHero';
-import Pokebola from './components/Pokebola';
 
-
+import Hero from './components/Hero';
+import Chamada from './components/Chamada.jsx';
 
 import './style.css'
 
 function App() {
   return (
-    <>
-     <div className="hero">
-        <Header/>
-        <InformacoesHero/>
-        <Pokebola/>
-     </div>
-    </>
+    <div>
+      <Hero/>
+      <Chamada/>
+    </div>
   )
 }
 
