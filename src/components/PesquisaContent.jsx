@@ -6,8 +6,8 @@ import Resultado from './Resultado.jsx';
 export function PesquisaContent(){
   return(
     <div className='pesquisaContent'>
-        <div className="container">
-            <div className="contentPesquisa">
+        <div className='container'>
+            <div className='contentPesquisa'>
                 <Pesquisa/>
                 <Resultado/>  
             </div>

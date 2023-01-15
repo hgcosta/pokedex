@@ -1,23 +1,45 @@
 import React from 'react'
 import './main.css'
-
+import { useEffect , useState } from 'react'
+import ListaPesquisa from './ListaPesquisa.jsx';
 
 
 export function Pesquisa(){
+
+  const [typePokemon, setTypePokeon] = useState([]);
+
+  useEffect(()=>{
+    getPokemonType();
+  }, [])
+
+  function getPokemonType(){
+    const urlType = 'https://pokeapi.co/api/v2/type';
+    fetch(urlType)
+    .then( response => response.json())
+    .then(r=> {
+     
+      r.results.map(type=>{
+        // Colocando o nome em maiusculo
+        let nameTypePokemon = type.name.charAt(0).toUpperCase() +type.name.slice(1);
+        const newType = {
+          name:nameTypePokemon,
+          id: Math.random(),
+        }
+        
+      
+        setTypePokeon(prevState=>[...prevState, newType]);
+        
+      })
+    })
+  }
+
+
+
   return(
-    <div class="colPesquisa">
-        <ul class="listaTipos">
+    <div className="colPesquisa">
+        <ul className="listaTipos">
             <li><a href=""><img src="./img/pokebola-azul.svg" alt="" />All</a></li>
-            <li><a href=""><img src="./img/Ghost.svg" alt="" />Ghost</a></li>
-            <li><a href=""><img src="./img/Stone.svg" alt="" />Stone</a></li>
-            <li><a href=""><img src="./img/Plants.svg" alt="" />Plants</a></li>
-            <li><a href=""><img src="./img/Dragon.svg" alt="" />Dragon</a></li>
-            <li><a href=""><img src="./img/Metal.svg" alt="" />Metal</a></li>
-            <li><a href=""><img src="./img/Shock.svg" alt="" />Shock</a></li>
-            <li><a href=""><img src="./img/Water.svg" alt="" />Water</a></li>
-            <li><a href=""><img src="./img/Fire.svg" alt="" />Fire</a></li>
-            <li><a href=""><img src="./img/Insect.svg" alt="" />Insect</a></li>
-            <li><a href=""><img src="./img/Fly.svg" alt="" />Flying</a></li>
+            { typePokemon.map(type=> <ListaPesquisa key={type.id} name={type.name}  /> ) }
         </ul>
     </div>
   )

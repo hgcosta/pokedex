@@ -5,7 +5,7 @@ import './main.css'
 
 export function Resultado(){
   return(
-    <div class="colResultado">
+    <div className="colResultado">
        <div className="chamadaResultPokemon">
             <img src="/img/pokebola-result.svg" alt="" />
             <div className="legenda">
